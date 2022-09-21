@@ -1,0 +1,14 @@
+[alias]
+	co = checkout
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	ci = commit
+	st = status
+	ll = log -10 --reverse --oneline 
+	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+	cm = commit -m
+	cam = commit -am
+	last = log -1 HEAD --stat
+	lr = log -10
+	gl = config --global -l
+	p = push
+	res = !git reset --hard
